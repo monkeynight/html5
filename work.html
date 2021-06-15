@@ -1,0 +1,86 @@
+﻿<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>2021-06-14</title>
+  <link rel="stylesheet" href="https://stackedit.io/style.css" />
+</head>
+
+<body class="stackedit">
+  <div class="stackedit__html"><p></p><div class="toc"><h3>《通信软件开发与应用》课程结业报告</h3><ul><li><a href="#_2">内容及开发过程</a></li><ul><li><a href="#HTML1_4">HTML1</a></li><li><a href="#1_6">1、图片滑跳</a></li><li><a href="#2_10">2。圆圈图和大图的切换</a></li><li><a href="#3_22">3其余部分</a></li><li><a href="#HTML2_25">HTML2</a></li><li><a href="#1_27">1嵌入音频</a></li><li><a href="#2_31">2添加动态背景</a></li><li><a href="#3_35">3制作登陆界面</a></li><li><a href="#HTML3_50">HTML3</a></li><li><a href="#_52">表格制作</a></li><li><a href="#HTML4_55">HTML4</a></li><li><a href="#1_work_57">1 这个网页存放了这次课程的所有网页，存放在work导航栏中</a></li><li><a href="#2__59">2 图片切换</a></li><li><a href="#3_66">3图片的放缩</a></li></ul><li><a href="#2_70">2遇到的问题以及解决方法</a></li><li><a href="#3_83">3未解决</a></li><li><a href="#4_91">4总结</a></li></ul></div><p></p>
+<h1><a id="_2"></a>内容及开发过程</h1>
+<h2><a id="HTML1_4"></a>HTML1</h2>
+<p><img src="https://img-blog.csdnimg.cn/20210614200138409.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L21vbmtleW5pZ2h0,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p>
+<h2><a id="1_6"></a>1、图片滑跳</h2>
+<p>我用的是jquery模板当中的jquery.nivo.slider.pack.js和jquery-1.6.1.min.js<br>
+加上<img src="https://img-blog.csdnimg.cn/20210614204341117.png" alt="在这里插入图片描述"><br>
+可以完成对图片的切换</p>
+<h2><a id="2_10"></a>2。圆圈图和大图的切换</h2>
+<p>原图如下<br>
+<img src="https://img-blog.csdnimg.cn/20210614205211865.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L21vbmtleW5pZ2h0,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"><br>
+通过span定义两个元素包含图片，可以完成效果</p>
+<p><img src="https://img-blog.csdnimg.cn/20210615100052525.png" alt="在这里插入图片描述"></p>
+<p><img src="https://img-blog.csdnimg.cn/20210614205246378.png" alt="在这里插入图片描述"><br>
+<img src="https://img-blog.csdnimg.cn/20210615100332741.png" alt="在这里插入图片描述"><br>
+在这基础用href指向原图，即可做到放大效果。在html4中采用了对图片尺寸放缩完成放大效果</p>
+<h2><a id="3_22"></a>3其余部分</h2>
+<p>同理如上，对头像同样处理附上自我介绍及一些其余部分<br>
+<img src="https://img-blog.csdnimg.cn/2021061421225336.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L21vbmtleW5pZ2h0,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p>
+<h2><a id="HTML2_25"></a>HTML2</h2>
+<p><img src="https://img-blog.csdnimg.cn/20210614212535167.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L21vbmtleW5pZ2h0,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p>
+<h2><a id="1_27"></a>1嵌入音频</h2>
+<p>audio标签定义声音<br>
+audio src=“http://www.w3school.com.cn/i/horse.ogg” controls=“controls”<br>
+为了流畅度选择了时间的音频</p>
+<h2><a id="2_31"></a>2添加动态背景</h2>
+<p>loop循环播放视频<br>
+css设置视频样式<br>
+<img src="https://img-blog.csdnimg.cn/20210614213407288.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L21vbmtleW5pZ2h0,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p>
+<h2><a id="3_35"></a>3制作登陆界面</h2>
+<p>制作完表格，对部分添加更多选择。<br>
+这次css和js都写着html文件内部。js包含一个获取四位数的函数，把它作为登录时随机的验证码</p>
+<pre><code class="prism language-c">function <span class="token function">creatCode</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+				<span class="token comment">//获得四位随机数</span>
+				var code<span class="token operator">=</span>Math<span class="token punctuation">.</span><span class="token function">floor</span><span class="token punctuation">(</span>Math<span class="token punctuation">.</span><span class="token function">random</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">*</span><span class="token number">9000</span><span class="token operator">+</span><span class="token number">1000</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+				<span class="token comment">//获取span对象</span>
+				var span<span class="token operator">=</span>document<span class="token punctuation">.</span><span class="token function">getElementById</span><span class="token punctuation">(</span><span class="token string">"codeSpan"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+				<span class="token comment">//把随机数赋值给span</span>
+				span<span class="token punctuation">.</span>innerHTML<span class="token operator">=</span>code<span class="token punctuation">;</span>
+</code></pre>
+<p><img src="https://img-blog.csdnimg.cn/20210615104805563.png" alt="在这里插入图片描述"></p>
+<h2><a id="HTML3_50"></a>HTML3</h2>
+<p><img src="https://img-blog.csdnimg.cn/20210615085836501.jpg?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L21vbmtleW5pZ2h0,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p>
+<h2><a id="_52"></a>表格制作</h2>
+<p>这个网页制作比较简单<br>
+用bgcolor设置好表格颜色，设置好每个方框的大小然后填充好内容</p>
+<h2><a id="HTML4_55"></a>HTML4</h2>
+<p><img src="https://img-blog.csdnimg.cn/20210614220110921.jpg?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L21vbmtleW5pZ2h0,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p>
+<h2><a id="1_work_57"></a>1 这个网页存放了这次课程的所有网页，存放在work导航栏中</h2>
+<p>每张图片的下方有网页的超链接中，点击即可查看详情</p>
+<h2><a id="2__59"></a>2 图片切换</h2>
+<p>定义两个个左右查看的类，用rel达到图片的跳转。<br>
+<img src="https://img-blog.csdnimg.cn/20210615104420519.png" alt="在这里插入图片描述"></p>
+<p>在实际操作必须先将第一个图片单独显示，否则无法直接显示该图片<br>
+<img src="https://img-blog.csdnimg.cn/20210615104556429.png" alt="在这里插入图片描述"></p>
+<h2><a id="3_66"></a>3图片的放缩</h2>
+<p>这里选取将同一图片进行放缩后，即可达到查看放大效果。<br>
+<img src="https://img-blog.csdnimg.cn/2021061510472045.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L21vbmtleW5pZ2h0,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p>
+<h1><a id="2_70"></a>2遇到的问题以及解决方法</h1>
+<p>1、设置html、body的height、width为100%，二者上方留有空白</p>
+<p>body、html的margin、padding、border值未清零，此时应设置清零</p>
+<p>2、网页布局不好导致不美观，无法准确定位</p>
+<p>可以提前规划好，设置好目标大小，找出网页的通用部分，设置导航条精准定位</p>
+<p>3、对目标样式始终无法达到效果</p>
+<p>对css需要修改之处，进行微调，可能是目标被其他部分所影响</p>
+<h1><a id="3_83"></a>3未解决</h1>
+<p>1、对query.nivo.slider.pack.js和jquery-1.6.1.min.js的理解依然不够，不知道确切原理</p>
+<p>2、动态背景在手机端打开可能会出现问题，也许是尺寸问题</p>
+<p>3、图片跳转中无法完成最后一张图片和第一张图片的跳转</p>
+<h1><a id="4_91"></a>4总结</h1>
+<p>网页制作是一个需要下苦功夫进行学习与钻研的过程，同时在学习中会积累到很多的经验。随着我们在学习的过程中对于遇到的问题进行不断分析与解决，不断地学会去对已有的经验进行总结，能够使得我们获得更多的技能与方法。这样的技术与方法对于今后学习网页制作无疑是一笔宝贵的财富，在对网页制作提出更高要求的同时，能够利用自身所学习到的扎实的知识与技巧在网页制作技术上不断革新。</p>
+</div>
+</body>
+
+</html>
